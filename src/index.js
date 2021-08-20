@@ -1,13 +1,32 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import firebase from "firebase/app";
+import { BrowserRouter } from 'react-router-dom';
+
+
+
+firebase.initializeApp ({
+  apiKey: "AIzaSyAgwYz6M1TAP4VJbgyGjR3B7bkWJsd7d9Y",
+  authDomain: "hostelbooking-b14ca.firebaseapp.com",
+  projectId: "hostelbooking-b14ca",
+  storageBucket: "hostelbooking-b14ca.appspot.com",
+  messagingSenderId: "701218700713",
+  appId: "1:701218700713:web:fd0258eb69825e812b18b8",
+  measurementId: "G-MEYHQSMCE2"
+});
+
 
 ReactDOM.render(
-  <React.StrictMode>
+ 
+  <BrowserRouter>
+   
     <App />
-  </React.StrictMode>,
+   
+  </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 
