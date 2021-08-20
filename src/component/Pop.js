@@ -1,5 +1,8 @@
 function Pop(props){
-    const{room,HostelName} =props;
+    const{room,HostelName,username} =props;
+    const val = HostelName + ":" + room;
+    localStorage.setItem(username,val)
+    console.log(val,username);
     return <div className="popup">
        
        <h1 className="header">Success</h1>

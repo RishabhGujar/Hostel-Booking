@@ -20,15 +20,8 @@ function ChooseFloor(){
       e.target.style.backgroundColor = "grey";
       e.target.style.color ="white";
       setIsClick(!false);
+      
    }
-
-   function handleBooking(){
-       const value = HostelName + ":" + room;
-      localStorage.setItem(username.username,value)
-    
-   }
-
-
 
 
    
@@ -64,9 +57,9 @@ function ChooseFloor(){
         </div>
      
 
-        <Popup trigger={<button onClick={handleBooking} className="bookbtn" style={{display:depends}}> Book Room </button>} position="center">
+        <Popup trigger={<button  className="bookbtn" style={{display:depends}}> Book Room </button>} position="center">
     <div>
-        <Pop room={room} HostelName={HostelName}/>
+        <Pop username={username} room={room} HostelName={HostelName}/>
     </div>
   </Popup>
    </div>

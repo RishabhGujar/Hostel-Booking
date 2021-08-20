@@ -7,21 +7,20 @@ import { Choose } from './component/Choose';
 import { Route, Switch } from 'react-router-dom';
 import { ChooseHostel } from './component/ChooseHostel';
 import { ChooseFloor } from './component/ChooseFloor';
-
-
+import { DataExists } from './component/DataExists';
 
 
 function UserControl(props){
     const username = props;
-    const value = localStorage.getItem(username);
+    const value = localStorage.getItem(username.username);
     if(value!==null&&value.includes(":")){
       
-      return <h1>welcomeBack Sier</h1>
+      return <DataExists username={username.username} value={value}/>
     }
    
     
    
-    return <Choose username={username}/>
+    return <Choose username={username.username}/>
 }
 
 
